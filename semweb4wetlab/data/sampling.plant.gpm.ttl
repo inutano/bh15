@@ -46,5 +46,5 @@ wetlab:str sio:has-target wetlab:strContainer .
 #
 
 #
-# General Process Model - Pulverizing material(s)
+# General Process Model - Pulverizing material
 #
