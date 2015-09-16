@@ -15,7 +15,7 @@
 @prefix snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
 
 #
-# General Process Model - Harvesting plant material(s)
+# General Process Model - Harvesting plant material
 #
 
 wetlab:hpm a sio:process-model .
@@ -30,7 +30,7 @@ wetlab:hpm sio:has-participants wetlab:hpmTool .
 wetlab:hpm sio:has-output wetlab:hpmPlantPart .
 
 #
-# General Process Model - Storing material(s)
+# General Process Model - Storing material
 #
 
 wetlab:store a sio:process-model .
@@ -42,19 +42,8 @@ wetlab:store sio:has-target wetlab:storeObject .
 wetlab:store sio:has-target wetlab:storeContainer .
 
 #
-# General Process Model - Incubation
+# General Process Model - Freeze material
 #
-
-wetlab:incubation a sio:process-model .
-wetlab:incubation rdfs:label "Incubation" .
-wetlab:incubation dc:description "Re-usable, lab-independent minimum definition of incubation" .
-
-wetlab:incubation
-wetlab:incubation
-wetlab:incubation
-wetlab:incubation
-wetlab:incubation
-
 
 #
 # General Process Model - Pulverizing material(s)
