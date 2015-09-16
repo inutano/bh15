@@ -42,9 +42,27 @@ wetlab:str sio:has-target wetlab:strObject .
 wetlab:str sio:has-target wetlab:strContainer .
 
 #
-# General Process Model - Freeze material
+# General Process Model - Freeze material in a fridge
 #
+
+wetlab:frz a sio:process-model .
+wetlab:frz rdfs:label "Freeze materlal" .
+wetlab:frz dc:description "Re-usable, lab-independent minimum definition of freezing materials in a fridge" .
+
+wetlab:frz sio:has-agent wetlab:frzAgent .
+wetlab:frz sio:has-target wetlab:frzObject .
+wetlab:frz sio:has-participants wetlab:frzFreezer .
+wetlab:frz sio:has-part wetlab:frzDuration .
+wetlab:frzDuration a sio:time-interval .
 
 #
 # General Process Model - Pulverizing material
 #
+
+wetlab:plv a sio:process-model .
+wetlab:plv rdfs:label "Pulverizing materrial" .
+wetlab:plv dc:description "Re-usable, lab-independent minimum definition of pulverizing material" .
+
+wetlab:plv sio:has-agent wetlab:plvAgent .
+wetlab:plv sio:has-target wetlab:plvObject .
+wetlab:plv sio:has-participants wetlab:plvTool .
