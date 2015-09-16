@@ -43,10 +43,37 @@ mylab:leaf a wetlab:hpmPlantPart .
 # Lab specification for storing material
 #
 
+mylab:specStr a sio:specification .
+mylab:specStr sio:specifies wetlab:str .
+
+mylab:specStr sio:has-part mylab:leaf .
+mylab:specStr sio:has-part mylab:fridge .
+
+mylab:leaf a wetlab:strObject .
+mylab:fridge a wetlab:strContainer .
+
 #
 # Lab specification for Freeze material
 #
 
+mylab:specFrz a sio:specification .
+mylab:specFrz sio:specifies wetlab:frz .
+
+mylab:specFrz sio:has-part mylab:leaf .
+mylab:specFrz sio:has-part mylab:fridge .
+
+mylab:leaf a wetlab:frzObject .
+mylab:fridge a wetlab:frzFreezer .
+
 #
 # Lab specification for Pulverizing material
 #
+
+mylab:specPlv a sio:specification .
+mylab:specPlv sio:specifies wetlab:plv .
+
+mylab:specPlv sio:has-part mylab:leaf .
+mylab:specPlv sio:has-part mylab:shaker .
+
+mylab:leaf a wetlab:plvObject .
+mylab:shaker a wetlab:plvTool .
