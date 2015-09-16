@@ -1,0 +1,29 @@
+@prefix wetlab: <http://wetlab.toBeDefined#>.
+@prefix mylab: <http://mylab.toBeDefined#>.
+@prefix tobd: <http://ontology.toBeDefined#>.
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbitaxon: <http://purl.org/obo/owl/NCBITaxon#> .
+@prefix efo: <http://www.ebi.ac.uk/efo/> .
+@prefix obi: <http://purl.obolibrary.org/obo/> .
+
+@prefix po: <http://purl.obolibrary.org/obo/po#> .
+@prefix snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
+
+#
+# Plant Sampling Workflow
+#
+
+mylab:wf-plantSampling a sio:workflow .
+mylab:wf-plantSampling sio:has-part wetlab:hpm .
+mylab:wf-plantSampling sio:has-part wetlab:str .
+mylab:wf-plantSampling sio:has-part wetlab:frz .
+mylab:wf-plantSampling sio:has-part wetlab:plv .
+
+wetlab:hpm sio:precedes wetlab:str .
+wetlab:str sio:precedes wetlab:frz .
+wetlab:plv sio:precedes wetlab:plv .
