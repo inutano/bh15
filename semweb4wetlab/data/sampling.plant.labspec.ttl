@@ -44,5 +44,9 @@ mylab:leaf a wetlab:hpmPlantPart .
 #
 
 #
-# Lab specification for Incubation
+# Lab specification for Freeze material
+#
+
+#
+# Lab specification for Pulverizing material
 #
