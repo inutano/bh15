@@ -1,0 +1,61 @@
+@prefix wetlab: <http://wetlab.toBeDefined#>.
+@prefix mylab: <http://mylab.toBeDefined#>.
+@prefix tobd: <http://ontology.toBeDefined#>.
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbitaxon: <http://purl.org/obo/owl/NCBITaxon#> .
+@prefix efo: <http://www.ebi.ac.uk/efo/> .
+@prefix obi: <http://purl.obolibrary.org/obo/> .
+
+@prefix po: <http://purl.obolibrary.org/obo/po#> .
+@prefix snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
+
+#
+# General Process Model - Harvesting plant material(s)
+#
+
+wetlab:hpm a sio:process-model .
+wetlab:hpm rdfs:label "Harvesting plant material process" .
+wetlab:hpm dc:description "Re-usable, lab-independent minimum definition of harvesting plant materials" .
+
+wetlab:hpm sio:has-agent wetlab:hpmAgent .
+wetlab:hpm sio:has-target wetlab:hpmPlant .
+wetlab:hpm sio:has-target wetlab:hpmContainer .
+wetlab:hpmContainer sio:has-quality sio:empty .
+wetlab:hpm sio:has-participants wetlab:hpmTool .
+wetlab:hpm sio:has-output wetlab:hpmPlantPart .
+
+#
+# General Process Model - Storing material(s)
+#
+
+wetlab:store a sio:process-model .
+wetlab:store rdfs:label "Storing material" .
+wetlab:store dc:description "Re-usable, lab-independent minimum definition of storing materials into a container" .
+
+wetlab:store sio:has-agent wetlab:storeAgent .
+wetlab:store sio:has-target wetlab:storeObject .
+wetlab:store sio:has-target wetlab:storeContainer .
+
+#
+# General Process Model - Incubation
+#
+
+wetlab:incubation a sio:process-model .
+wetlab:incubation rdfs:label "Incubation" .
+wetlab:incubation dc:description "Re-usable, lab-independent minimum definition of incubation" .
+
+wetlab:incubation
+wetlab:incubation
+wetlab:incubation
+wetlab:incubation
+wetlab:incubation
+
+
+#
+# General Process Model - Pulverizing material(s)
+#
