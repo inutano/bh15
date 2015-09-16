@@ -33,13 +33,13 @@ wetlab:hpm sio:has-output wetlab:hpmPlantPart .
 # General Process Model - Storing material
 #
 
-wetlab:store a sio:process-model .
-wetlab:store rdfs:label "Storing material" .
-wetlab:store dc:description "Re-usable, lab-independent minimum definition of storing materials into a container" .
+wetlab:str a sio:process-model .
+wetlab:str rdfs:label "Storing material" .
+wetlab:str dc:description "Re-usable, lab-independent minimum definition of storing materials into a container" .
 
-wetlab:store sio:has-agent wetlab:storeAgent .
-wetlab:store sio:has-target wetlab:storeObject .
-wetlab:store sio:has-target wetlab:storeContainer .
+wetlab:str sio:has-agent wetlab:strAgent .
+wetlab:str sio:has-target wetlab:strObject .
+wetlab:str sio:has-target wetlab:strContainer .
 
 #
 # General Process Model - Freeze material
