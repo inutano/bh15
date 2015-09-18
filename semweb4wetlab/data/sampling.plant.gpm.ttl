@@ -22,24 +22,59 @@ wetlab:hpm a sio:process-model .
 wetlab:hpm rdfs:label "Harvesting plant material process" .
 wetlab:hpm dc:description "Re-usable, lab-independent minimum definition of harvesting plant materials" .
 
-wetlab:hpm sio:has-agent wetlab:hpmAgent .
-wetlab:hpm sio:has-target wetlab:hpmPlant .
-wetlab:hpm sio:has-target wetlab:hpmContainer .
-wetlab:hpmContainer sio:has-quality sio:empty .
-wetlab:hpm sio:has-participants wetlab:hpmTool .
-wetlab:hpm sio:has-output wetlab:hpmPlantPart .
+wetlab:hpm sio:has-agent foaf:agent .
+wetlab:hpm sio:has-target po:plant-anatomical-entity .
+wetlab:hpm sio:has-participants sio:device .
+wetlab:hpm sio:has-output po:multi-tissue-plant-structure .
 
 #
-# General Process Model - Storing material
+# General Process Model - Storing material in a container
 #
 
 wetlab:str a sio:process-model .
 wetlab:str rdfs:label "Storing material" .
 wetlab:str dc:description "Re-usable, lab-independent minimum definition of storing materials into a container" .
 
-wetlab:str sio:has-agent wetlab:strAgent .
-wetlab:str sio:has-target wetlab:strObject .
-wetlab:str sio:has-target wetlab:strContainer .
+wetlab:str sio:has-agent foaf:agent .
+wetlab:str sio:has-input sio:thing .
+wetlab:str sio:has-target obi:container .
+
+wetlab:str sio:has-output wetlab:strOut .
+wetlab:strOut a obi:container .
+wetlab:strOut sio:contains sio:thing .
+
+#
+# General Process Model - Put a material under controlled environment
+#
+
+wetlab:put a sio:process-model .
+wetlab:put rdfs:label "Put a material under controlled environment" .
+wetlab:put dc:description "Re-usable, lab-independent minimum definition of putting a thing on the controlled environment" .
+
+wetlab:put sio:has-agent foaf:agent .
+wetlab:put sio:has-input sio:thing .
+wetlab:put sio:has-target wetlab:putDestination .
+wetlab:putDestination a obi:container .
+wetlab:put sio:has-measurement-value sio:quantity .
+
+wetlab:putDestination sio:contains
+
+wetlab:put sio:has-output wetlab:putOut .
+wetlab:putOut a wetlab:putDestination .
+wetlab:putOut sio:contains sio:thing .
+
+#
+# General Process Model - Keep a material for a period of time
+#
+
+wetlab:keep a sio:process-model .
+wetlab:keep rdfs:label "Keep a material for a period of time" .
+wetlab:keep dc:description "Re-usable, lab-independent minimum definition of keeping a material for a period of time" .
+
+wetlab:keep sio:has-target sio:thing .
+wetlab:keep sio:has-unit sio:time-interval .
+wetlab:keep sio:has-output sio:thing .
+
 
 #
 # General Process Model - Freeze material in a fridge
@@ -48,12 +83,6 @@ wetlab:str sio:has-target wetlab:strContainer .
 wetlab:frz a sio:process-model .
 wetlab:frz rdfs:label "Freeze materlal" .
 wetlab:frz dc:description "Re-usable, lab-independent minimum definition of freezing materials in a fridge" .
-
-wetlab:frz sio:has-agent wetlab:frzAgent .
-wetlab:frz sio:has-target wetlab:frzObject .
-wetlab:frz sio:has-participants wetlab:frzFreezer .
-wetlab:frz sio:has-part wetlab:frzDuration .
-wetlab:frzDuration a sio:time-interval .
 
 #
 # General Process Model - Pulverizing material

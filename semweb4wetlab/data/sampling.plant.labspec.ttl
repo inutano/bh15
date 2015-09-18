@@ -21,11 +21,11 @@
 mylab:specHpm a sio:specification .
 mylab:specHpm sio:specifies wetlab:hpm .
 
-mylab:specHpm sio:has-part mylab:wheat .
-mylab:specHpm sio:has-part mylab:razor .
-mylab:specHpm sio:has-part mylab:test-tube .
-mylab:specHpm sio:has-part mylab:bead .
-mylab:specHpm sio:has-part mylab:leaf .
+mylab:specHpm sio:has-proper-part mylab:wheat .
+mylab:specHpm sio:has-proper-part mylab:razor .
+mylab:specHpm sio:has-proper-part mylab:test-tube .
+mylab:specHpm sio:has-proper-part mylab:bead .
+mylab:specHpm sio:has-proper-part mylab:leaf .
 
 mylab:wheat a po:whole-plant .
 mylab:test-tube a obi:test-tube .
@@ -33,7 +33,7 @@ mylab:bead a obi:bead .
 mylab:razor a snomedct:razor .
 mylab:leaf a po:leaf .
 
-mylab:wheat a wetlab:hpmPlant .
+mylab:wheat  ???:plant .
 mylab:test-tube a wetlab:hpmContainer .
 mylab:bead a obi:bead .
 mylab:razor a wetlab:hpmTool .
@@ -46,8 +46,8 @@ mylab:leaf a wetlab:hpmPlantPart .
 mylab:specStr a sio:specification .
 mylab:specStr sio:specifies wetlab:str .
 
-mylab:specStr sio:has-part mylab:leaf .
-mylab:specStr sio:has-part mylab:fridge .
+mylab:specStr sio:has-proper-part mylab:leaf .
+mylab:specStr sio:has-proper-part mylab:fridge .
 
 mylab:leaf a wetlab:strObject .
 mylab:fridge a wetlab:strContainer .
@@ -59,8 +59,8 @@ mylab:fridge a wetlab:strContainer .
 mylab:specFrz a sio:specification .
 mylab:specFrz sio:specifies wetlab:frz .
 
-mylab:specFrz sio:has-part mylab:leaf .
-mylab:specFrz sio:has-part mylab:fridge .
+mylab:specFrz sio:has-proper-part mylab:leaf .
+mylab:specFrz sio:has-proper-part mylab:fridge .
 
 mylab:leaf a wetlab:frzObject .
 mylab:fridge a wetlab:frzFreezer .
@@ -72,8 +72,8 @@ mylab:fridge a wetlab:frzFreezer .
 mylab:specPlv a sio:specification .
 mylab:specPlv sio:specifies wetlab:plv .
 
-mylab:specPlv sio:has-part mylab:leaf .
-mylab:specPlv sio:has-part mylab:shaker .
+mylab:specPlv sio:has-proper-part mylab:leaf .
+mylab:specPlv sio:has-proper-part mylab:shaker .
 
 mylab:leaf a wetlab:plvObject .
 mylab:shaker a wetlab:plvTool .

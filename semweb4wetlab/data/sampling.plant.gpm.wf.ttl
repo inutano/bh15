@@ -1,3 +1,4 @@
+
 @prefix wetlab: <http://wetlab.toBeDefined#>.
 @prefix mylab: <http://mylab.toBeDefined#>.
 @prefix tobd: <http://ontology.toBeDefined#>.
@@ -18,11 +19,11 @@
 # Plant Sampling Workflow
 #
 
-mylab:wf-plantSampling a sio:workflow .
-mylab:wf-plantSampling sio:has-part wetlab:hpm .
-mylab:wf-plantSampling sio:has-part wetlab:str .
-mylab:wf-plantSampling sio:has-part wetlab:frz .
-mylab:wf-plantSampling sio:has-part wetlab:plv .
+mylab:wf-plantSampling a sio:process-model .
+mylab:wf-plantSampling sio:has-proper-part wetlab:hpm .
+mylab:wf-plantSampling sio:has-proper-part wetlab:str .
+mylab:wf-plantSampling sio:has-proper-part wetlab:frz .
+mylab:wf-plantSampling sio:has-proper-part wetlab:plv .
 
 wetlab:hpm sio:precedes wetlab:str .
 wetlab:str sio:precedes wetlab:frz .

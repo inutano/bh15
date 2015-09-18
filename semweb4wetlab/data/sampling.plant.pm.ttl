@@ -15,8 +15,24 @@
 @prefix snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
 
 #
+# Workflow
+#
+
+lmylab:wf-plantSampling-001 a sio:workflow .
+lmylab:wf-plantSampling-001 sio:has-part wetlab:hpm .
+lmylab:wf-plantSampling-001 sio:has-part wetlab:str .
+lmylab:wf-plantSampling-001 sio:has-part wetlab:frz .
+lmylab:wf-plantSampling-001 sio:has-part wetlab:plv .
+
+wetlab:hpm sio:precedes wetlab:str .
+wetlab:str sio:precedes wetlab:frz .
+wetlab:plv sio:precedes wetlab:plv .
+
+#
 # Process Model - Harvesting plant material
 #
+
+mylab:
 
 #
 # Process Model - Storing material
